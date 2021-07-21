@@ -34,6 +34,9 @@ public class Attractor : MonoBehaviour {
     }
 #endif
 
+    public float rotationSpeed;
+    public int rotationDirection;
+
     private void UpdateGravity()
     {
         gravity = gravityMultiplier * 4000;

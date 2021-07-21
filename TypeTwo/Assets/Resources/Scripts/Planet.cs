@@ -26,6 +26,14 @@ public class Planet : MonoBehaviour
     MeshFilter[] meshFilters;
     TerrainFace[] terrainFaces;
 
+    public float rotationSpeed;
+    public int rotationDirection;
+
+
+    private void Update()
+    {
+        transform.Rotate(0, rotationSpeed * rotationDirection * Time.deltaTime, 0, Space.Self);
+    }
 
     void Initialize()
     {
